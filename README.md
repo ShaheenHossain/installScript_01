@@ -3,8 +3,7 @@
 
 
 sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/niir1632/eagle1632_install.sh
-`
-```
+
 sudo chmod +x eagle1632_install.sh
 
 sudo ./eagle1632_install.sh

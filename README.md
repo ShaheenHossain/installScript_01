@@ -12,11 +12,11 @@ If you set the parameter ```INSTALL_NGINX``` to ```True``` you should also confi
 ##### 1. Download the script:
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/salgadi_journalshow_ent1669/eagle1669_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/trustedmovrs_islandaro_1668/eagle1668_install.sh
 
-sudo chmod +x eagle1669_install.sh
+sudo chmod +x eagle1668_install.sh
 
-sudo ./eagle1669_install.sh
+sudo ./eagle1668_install.sh
 
 
 

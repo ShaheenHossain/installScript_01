@@ -14,7 +14,7 @@ If you set the parameter ```INSTALL_NGINX``` to ```True``` you should also confi
 #sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/16.0/odoo_install.sh
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/eagle1631/eagle1631_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/fatih87_ent1669/eagle1669_install.sh
 ```
 ##### 2. Modify the parameters as you wish.
 There are a few things you can configure, this is the most used list:<br/>
@@ -34,9 +34,9 @@ There are a few things you can configure, this is the most used list:<br/>
 
 #### 3. Make the script executable
 ```
-sudo chmod +x eagle1631_install.sh
+sudo chmod +x eagle1669_install.sh
 
-sudo ./eagle1631_install.sh
+sudo ./eagle1669_install.sh
 
 
 

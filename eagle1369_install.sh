@@ -1,12 +1,12 @@
-OE_USER="eagle1632"
+OE_USER="eagle1369"
 OE_HOME="/$OE_USER"
 OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
-INSTALL_WKHTMLTOPDF="True"
-OE_PORT="8032"
+INSTALL_WKHTMLTOPDF="False"
+OE_PORT="8069"
 OE_VERSION="master"
 IS_ENTERPRISE="False"
 # Installs postgreSQL V14 instead of defaults (e.g V12 for Ubuntu 20/22) - this improves performance
-INSTALL_POSTGRESQL_FOURTEEN="True"
+INSTALL_POSTGRESQL_FOURTEEN="False"
 INSTALL_NGINX="False"
 OE_SUPERADMIN="admin"
 # Set to "True" to generate a random password, "False" to use the variable in OE_SUPERADMIN

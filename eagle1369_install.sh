@@ -90,7 +90,7 @@ else
 fi
 
 echo -e "\n---- Create Eagle system user ----"
-sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'EAGLE1632' --group $OE_USER
+sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'EAGLE1369' --group $OE_USER
 #The user should also be added to the sudo'ers group.
 sudo adduser $OE_USER sudo
 
@@ -102,7 +102,7 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 # Install Eagle
 #--------------------------------------------------
 echo -e "\n==== Installing Eagle Server ===="
-sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/agro_odoo_ent_16 $OE_HOME_EXT/
+sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/odoo_13ent_asmaa_03 $OE_HOME_EXT/
 
 if [ $IS_ENTERPRISE = "True" ]; then
     # Eagle Enterprise install!

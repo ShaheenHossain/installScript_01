@@ -11,8 +11,8 @@ If you set the parameter ```INSTALL_NGINX``` to ```True``` you should also confi
 
 ##### 1. Download the script:
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/swissodoo1660/eagle1660_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/mvillafani_odooent1669/eagle1669_install.sh
 
-sudo chmod +x eagle1660_install.sh
+sudo chmod +x eagle1669_install.sh
 
-sudo ./eagle1660_install.sh
+sudo ./eagle1669_install.sh

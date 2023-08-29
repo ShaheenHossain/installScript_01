@@ -11,8 +11,8 @@ If you set the parameter ```INSTALL_NGINX``` to ```True``` you should also confi
 
 ##### 1. Download the script:
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/swisscrm_swiss1662/eagle1662_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/lajara_1668/eagle1668_install.sh
 
-sudo chmod +x eagle1662_install.sh
+sudo chmod +x eagle1668_install.sh
 
-sudo ./eagle1662_install.sh
+sudo ./eagle1668_install.sh

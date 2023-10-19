@@ -8,14 +8,14 @@ This script can be safely used in a multi-odoo code base server because the defa
 
 ##### 1. Download the script:
 ```
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/niirwebsys1230/eagle-install-1230.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/hannaco_odoo_c1269/eagle-install-1269.sh
 
 ```
-sudo chmod +x eagle-install-1230.sh
+sudo chmod +x eagle-install-1269.sh
 ```
 
 ```
-sudo ./eagle-install-1230.sh
+sudo ./eagle-install-1269.sh
 ```
 
 

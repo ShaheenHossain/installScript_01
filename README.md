@@ -2,11 +2,11 @@
 
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/niir1632/eagle1632_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/niir_websys_odoo_ent1769/eagle1769_install.sh
 
-sudo chmod +x eagle1632_install.sh
+sudo chmod +x eagle1769_install.sh
 
-sudo ./eagle1632_install.sh
+sudo ./eagle1769_install.sh
 
 
 

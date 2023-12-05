@@ -102,7 +102,7 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 # Install Lajara
 #--------------------------------------------------
 echo -e "\n==== Installing Lajara Server ===="
-sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/odoo_ent_17 $OE_HOME_EXT/
+sudo git clone --depth 1 --branch $OE_VERSION https://github.com/lajaraltd1/odoo17 $OE_HOME_EXT/
 
 if [ $IS_ENTERPRISE = "True" ]; then
     # Lajara Enterprise install!

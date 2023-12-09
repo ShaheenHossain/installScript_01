@@ -102,7 +102,7 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 # Install Eagle
 #--------------------------------------------------
 echo -e "\n==== Installing Eagle Server ===="
-sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/niir_websys_odoo_17ent $OE_HOME_EXT/
+sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/euriddgarbutt_odoo_17ent $OE_HOME_EXT/
 
 if [ $IS_ENTERPRISE = "True" ]; then
     # Eagle Enterprise install!

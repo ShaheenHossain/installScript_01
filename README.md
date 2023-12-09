@@ -2,7 +2,7 @@
 
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/niir_websys_odoo_ent1769/eagle1769_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/euriddgarbutt_smartmoves_1769/eagle1769_install.sh
 
 sudo chmod +x eagle1769_install.sh
 

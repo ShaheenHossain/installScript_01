@@ -11,8 +11,8 @@ If you set the parameter ```INSTALL_NGINX``` to ```True``` you should also confi
 
 ##### 1. Download the script:
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/lajara_1767/lajara_1767_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/lajara_1767/lajara1767_install.sh
 
-sudo chmod +x lajara_1767_install.sh
+sudo chmod +x lajara1767_install.sh
 
-sudo ./lajara_1767_install.sh
+sudo ./lajara1767_install.sh

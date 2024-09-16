@@ -3,7 +3,7 @@
 
 # Odoo 17 installation script with Python 3.10 in a virtual environment
 
-OE_USER="odoo1701"
+OE_USER="eagle1701"
 OE_HOME="/$OE_USER"
 OE_HOME_EXT="$OE_HOME/${OE_USER}-server"
 OE_VERSION="17.0"

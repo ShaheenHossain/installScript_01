@@ -6,7 +6,7 @@ OE_PORT="8033"
 OE_VERSION="master"
 IS_ENTERPRISE="False"
 # Installs postgreSQL V14 instead of defaults (e.g V12 for Ubuntu 20/22) - this improves performance
-INSTALL_POSTGRESQL_FOURTEEN="False"
+INSTALL_POSTGRESQL_FOURTEEN="True"
 INSTALL_NGINX="False"
 OE_SUPERADMIN="admin"
 # Set to "True" to generate a random password, "False" to use the variable in OE_SUPERADMIN

@@ -93,8 +93,6 @@ PATH=/bin:/sbin:/usr/bin
 
 DAEMON=/$OE_MAIN_SERVER/$OE_MAIN_SERVER_CONF/odoo-bin
 
-#DAEMON=$OE_HOME_EXT/odoo-bin
-
 NAME=$OE_CONFIG
 DESC=$OE_CONFIG
 # Specify the user name (Default: $OE_USER).
@@ -145,6 +143,7 @@ exit 1
 esac
 exit 0
 EOF
+
 
 echo -e "* Security Init File"
 sudo mv ~/$OE_CONFIG /etc/init.d/$OE_CONFIG

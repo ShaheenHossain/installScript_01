@@ -2,13 +2,13 @@
 
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/eagleerp_multi_1638/eagle1638_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/eagle1743_multi/eagle1743_install.sh
 
 
-sudo chmod +x eagle1638_install.sh
+sudo chmod +x eagle1743_install.sh
 
 
-sudo ./eagle1638_install.sh
+sudo ./eagle1743_install.sh
 
 
 

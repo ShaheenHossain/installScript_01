@@ -1,43 +1,29 @@
-
-OE_USER="eagle1638"
+OE_USER="eagle1742"
 OE_HOME="/$OE_USER"
 OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
-OE_PORT="8038"
+OE_PORT="8042"
 OE_SUPERADMIN="admin"
 OE_CONFIG="${OE_USER}-server"
 OE_VERSION="master"
 
-OE_MAIN_SERVER="eagle1637"
+OE_MAIN_SERVER="eagle1741"
 OE_MAIN_SERVER_CONF="${OE_MAIN_SERVER}-server"
 
 LONGPOLLING_PORT="8072"
 ADMIN_EMAIL="rapidgrps@gmail.com"
 
+# Convert OE_USER to uppercase
+OE_USER_UPPER=$(echo "$OE_USER" | tr '[:lower:]' '[:upper:]')
 
 
-#--------------------------------------------------
-# Update Server
-#--------------------------------------------------
-#echo -e "\n---- Update Server ----"
-# universe package is for Ubuntu 18.x
-#sudo add-apt-repository universe
 
-#sudo add-apt-repository "deb http://mirrors.kernel.org/ubuntu/ xenial main"
-#sudo apt-get update
-#sudo apt-get upgrade -y
-
-#--------------------------------------------------
-# Install PostgreSQL Server
-#--------------------------------------------------
-#echo -e "\n---- Install PostgreSQL Server ----"
-#sudo apt-get install postgresql postgresql-server-dev-all -y
-
-echo -e "\n---- Creating the Eagle PostgreSQL User  ----"
+-- Creating the Eagle PostgreSQL User  ----"
 sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
 
 
 echo -e "\n---- Create EAGLE system user ----"
-sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'EAGLE1638' --group $OE_USER
+sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos "$OE_USER_UPPER" --group $OE_USER
+
 #The user should also be added to the sudo'ers group.
 sudo adduser $OE_USER sudo
 
@@ -45,15 +31,15 @@ echo -e "\n---- Create Log directory ----"
 sudo mkdir /var/log/$OE_USER
 sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 
-#sudo ufw allow $OE_PORT
+sudo ufw allow $OE_PORT
 
 
 #--------------------------------------------------
 # Install EAGLE
 #--------------------------------------------------
 echo -e "\n==== Installing EAGLE Server ===="
-sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/eagleblank $OE_HOME_EXT/
 
+sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/eagleblank $OE_HOME_EXT/
 
 echo -e "\n---- Create custom module directory ----"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom"
@@ -69,7 +55,7 @@ sudo touch /etc/${OE_CONFIG}.conf
 echo -e "* Creating server config file"
 sudo su root -c "printf '[options] \n; This is the password that allows database operations:\n' >> /etc/${OE_CONFIG}.conf"
 
-sudo su root -c "printf 'addons_path=/$OE_MAIN_SERVER/$OE_MAIN_SERVER_CONF/eagle/addons,/$OE_MAIN_SERVER/custom/addons\n' >> /etc/${OE_CONFIG}.conf"
+sudo su root -c "printf 'addons_path=/$OE_MAIN_SERVER/$OE_MAIN_SERVER_CONF/odoo/addons,/$OE_HOME/custom/addons\n' >> /etc/${OE_CONFIG}.conf"
 sudo su root -c "printf 'db_user = ${OE_USER}\n' >> /etc/${OE_CONFIG}.conf"
 sudo su root -c "printf 'db_passwrord = ${OE_SUPERADMIN}\n' >> /etc/${OE_CONFIG}.conf"
 sudo su root -c "printf 'admin_passwd = ${OE_SUPERADMIN}\n' >> /etc/${OE_CONFIG}.conf"
@@ -82,7 +68,7 @@ sudo chmod 640 /etc/${OE_CONFIG}.conf
 
 echo -e "* Create startup file"
 sudo su root -c "echo '#!/bin/sh' >> $OE_HOME_EXT/start.sh"
-sudo su root -c "echo 'sudo -u $OE_USER $OE_HOME_EXT/eagle-bin --config=/etc/${OE_CONFIG}.conf' >> $OE_HOME_EXT/start.sh"
+sudo su root -c "echo 'sudo -u $OE_USER $OE_HOME_EXT/odoo-bin --config=/etc/${OE_CONFIG}.conf' >> $OE_HOME_EXT/start.sh"
 sudo chmod 755 $OE_HOME_EXT/start.sh
 
 
@@ -103,17 +89,17 @@ cat <<EOF > ~/$OE_CONFIG
 
 PATH=/bin:/sbin:/usr/bin
 
-# Specify the original database name (Default: eagle1637).
+# Specify the original database name (Default: $OE_USER).
 
-DAEMON=/$OE_MAIN_SERVER/$OE_MAIN_SERVER_CONF/eagle-bin
+DAEMON=/$OE_MAIN_SERVER/$OE_MAIN_SERVER_CONF/odoo-bin
 
-#DAEMON=$OE_HOME_EXT/eagle-bin
+#DAEMON=$OE_HOME_EXT/odoo-bin
 
 NAME=$OE_CONFIG
 DESC=$OE_CONFIG
-# Specify the user name (Default: eagle).
+# Specify the user name (Default: $OE_USER).
 USER=$OE_USER
-# Specify an alternate config file (Default: /etc/eagle1573-server.conf).
+# Specify an alternate config file (Default: /etc/$OE_USER-server.conf).
 CONFIGFILE="/etc/${OE_CONFIG}.conf"
 # pidfile
 PIDFILE=/var/run/\${NAME}.pid
@@ -171,14 +157,14 @@ sudo update-rc.d $OE_CONFIG defaults
 echo -e "* Starting Eagle 16 Service"
 sudo su root -c "/etc/init.d/$OE_CONFIG start"
 echo "-----------------------------------------------------------"
-echo "Done! The Eagle 12 server is up and running. Specifications:"
+echo "Done! The Eagle 17 server is up and running. Specifications:"
 echo "Port: $OE_PORT"
 echo "User service: $OE_USER"
 echo "User PostgreSQL: $OE_USER"
 echo "Code location: $OE_USER"
-echo "Addons folder: /$OE_MAIN_SERVER/$OE_MAIN_SERVER_CONF/eagle/addons/"
-echo "Start Eagle 12 service: sudo service $OE_CONFIG start"
-echo "Stop Eagle 12 service: sudo service $OE_CONFIG stop"
-echo "Restart Eagle 12 service: sudo service $OE_CONFIG restart"
+echo "Addons folder: /$OE_MAIN_SERVER/$OE_MAIN_SERVER_CONF/odoo/addons/"
+echo "Start Eagle 17 service: sudo service $OE_CONFIG start"
+echo "Stop Eagle 17 service: sudo service $OE_CONFIG stop"
+echo "Restart Eagle 17 service: sudo service $OE_CONFIG restart"
 echo "-----------------------------------------------------------"
 

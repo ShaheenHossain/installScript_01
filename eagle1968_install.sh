@@ -66,6 +66,9 @@ sudo apt-get install git python3-cffi build-essential wget python3-dev python3-v
 echo -e "\n---- Install python packages/requirements ----"
 sudo -H pip3 install -r https://github.com/odoo/odoo/raw/19.0/requirements.txt
 
+# if not installed then use
+# pip install --break-system-packages -r requirements.txt
+
 echo -e "\n---- Installing nodeJS NPM and rtlcss for LTR support ----"
 sudo apt-get install nodejs npm -y
 sudo npm install -g rtlcss

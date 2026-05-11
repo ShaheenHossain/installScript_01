@@ -1,10 +1,10 @@
 #!/bin/bash
 
-OE_USER="eagle1829"
+OE_USER="eagle1910"
 OE_HOME="/$OE_USER"
 OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
-OE_PORT="8029"
-OE_VERSION="18.0"
+OE_PORT="8010"
+OE_VERSION="master"
 IS_ENTERPRISE="False"
 INSTALL_POSTGRESQL_FOURTEEN="False"
 OE_SUPERADMIN="admin"
@@ -48,14 +48,15 @@ sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
 
 # Create Odoo user and directories
 echo -e "\n---- Creating Odoo system user and directories ----"
-sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'Odoo' --group $OE_USER
+sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'eagle1910' --group $OE_USER
 sudo mkdir -p /var/log/$OE_USER
 sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 sudo mkdir -p $OE_HOME/custom/addons
 
 # Clone Odoo source code
-echo -e "\n---- Cloning Odoo 18.0 ----"
-sudo git clone --depth 1 --branch $OE_VERSION https://github.com/odoo/odoo $OE_HOME_EXT
+echo -e "\n---- Cloning Odoo 19.0 ----"
+sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/odoo_19ent_20260404_6kyr $OE_HOME_EXT
+
 
 # Set up virtual environment
 echo -e "\n---- Creating Python Virtual Environment ----"

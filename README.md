@@ -7,3 +7,14 @@ sudo chmod +x eagle1967_install.sh
 
 sudo ./eagle1967_install.sh
 
+
+
+
+
+
+sudo rm -R /eagle1967	
+sudo rm -f /etc/eagle1967-server.conf
+sudo rm -f /var/log/eagle1967-server.log
+sudo rm -R /var/log/eagle1967
+update-rc.d -f eagle1967-server remove
+sudo rm -f /etc/init.d/eagle1967-server

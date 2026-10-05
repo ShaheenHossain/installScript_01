@@ -1,9 +1,9 @@
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/odoo_ent1967/eagle1967_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/odoo_ent2066/eagle2066_install.sh
 ```
 
 #### 3. Make the script executable
 ```
-sudo chmod +x eagle1967_install.sh
+sudo chmod +x eagle2066_install.sh
 
-sudo ./eagle1967_install.sh
+sudo ./eagle2066_install.sh
 

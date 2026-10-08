@@ -1,4 +1,4 @@
-########### **install first 1967 then install 2066** ##############
+########### **install first 1967 then install 2066 2064 is latest** ##############
 
 sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/niir_websys_ent2064/eagle2064_install.sh
 ```

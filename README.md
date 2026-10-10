@@ -1,4 +1,4 @@
-########### **install first 1967 then install 2066** ##############
+########### **install first 1967 then install 2066** need to set http_interface = 0.0.0.0 ##############
 
 sudo wget https://raw.githubusercontent.com/ShaheenHossain/installScript_01/odoo_ent2066/eagle2066_install.sh
 ```
